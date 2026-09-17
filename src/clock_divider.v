@@ -16,7 +16,7 @@ module clock_divider #(parameter integer DIVISOR = 10) (
         end else begin
             if (count == DIVISOR - 1) count <= 0;
             else count <= count + 1'b1;
-            if (count == DIVISOR/2) divided <= 1'b1;
+            if (count == DIVISOR/2 - 1) divided <= 1'b1;
             else if (count == DIVISOR - 1) divided <= 1'b0;
         end
     end
